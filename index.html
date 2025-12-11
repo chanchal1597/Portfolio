@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+        
+            /* NAVBAR */
+            .navbar {
+                background: #1a1a1a;
+                padding: 15px 0;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            .navbar ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                list-style: none;
+            }
+            .navbar a {
+                color: #00e6e6;
+                text-decoration: none;
+                font-size: 18px;
+                transition: 0.3s;
+            }
+            .navbar a:hover {
+                color: #ffffff;
+                border-bottom: 2px solid #00e6e6;
+            }
+
+            /* GENERAL */
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #0d0d0d;
+                color: white;
+                text-align: center;
+            }
+
+            header {
+                padding: 40px 20px;
+                animation: fadeDown 1s ease-out;
+            }
+
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 3px solid white;
+                object-fit: cover;
+                margin-bottom: 20px;
+                animation: popIn 0.8s ease-out;
+            }
+
+            .section {
+                margin: 40px auto;
+                max-width: 800px;
+                background: #1a1a1a;
+                padding: 25px;
+                border-radius: 12px;
+            }
+
+            .skills-list {
+                list-style: none;
+                padding: 0;
+            }
+            .skills-list li {
+                padding: 5px;
+                font-size: 18px;
+            }
+
+            /* PROJECT CARDS */
+            .projects-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .project-card {
+                background: #262626;
+                border-radius: 12px;
+                padding: 15px;
+                transition: transform 0.3s ease;
+            }
+
+            .project-card img {
+                width: 100%;
+                border-radius: 10px;
+                height: 160px;
+                object-fit: cover;
+            }
+
+            /* Hover Zoom */
+            .zoom:hover {
+                transform: scale(1.05);
+            }
+
+            /* SOCIAL ICONS */
+            .social-icons a {
+                font-size: 26px;
+                color: #51d4d4;
+                margin: 10px;
+                transition: 0.3s;
+            }
+
+            .social-icons a:hover {
+                color: #ffffff;
+                transform: scale(1.2);
+            }
+
+            /* RESPONSIVE */
+            @media (max-width: 600px) {
+                .profile-pic {
+                    width: 120px;
+                    height: 120px;
+                }
+                h1 {
+                    font-size: 24px;
+                }
+                .section {
+                    margin: 20px;
+                    padding: 15px;
+                }
+                .projects-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="header-section">
+            <img src="D:\BCA_1A\Saved Pictures\mypic.jpg" class="profile-pic" alt="Profile Photo" />
+            <h1 class="title">Chanchal Kesharwani</h1>
+            <h2 class="subtitle">Web Developer - Student</h2>
+        </header>
+
+        <section id="about" class="section fade-in">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate Web Developer who loves creating clean, responsive, and user-friendly websites.
+                I enjoy learning new technologies and building real-world projects using HTML, CSS, and JavaScript.
+            </p>
+        </section>
+
+        <section id="skills" class="section fade-in">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section fade-in">
+            <h2>Projects</h2>
+
+                <div class="projects-container">
+                    <div class="project-card zoom">
+                        <img src="D:\BCA_1A\Saved Pictures\HTML_Blog-scaled.jpeg" alt="Portfolio Project">
+                        <h3>Portfolio (HTML & CSS)</h3>
+                        <p>A clean and responsive personal portfolio website.</p>
+                     </div>
+
+                    <div class="project-card zoom">
+                        <img src="D:\BCA_1A\Saved Pictures\math.jpg" alt="Arithmetic Project">
+                        <h3>Arithmetic Operations</h3>
+                        <p>A JavaScript project performing all basic operations.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="contact" class="section fade-in contact-section">
+                
+            <h2>Contact Me</h2>
+
+            <p><strong>Phone:</strong> +91 8839379220</p>
+
+            <p><strong>Email:</strong> 
+                <a href="mailto:Chanchalkesharwani4@gmail.com">Chanchalkesharwani4@gmail.com</a>
+            </p>
+
+            <div class="social-icons">
+                <a href="https://github.com/chanchal1597" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/chanchal-kesharwani-258625396/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/15__chanchal/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <footer>
+            © 2025 Chanchal Kesharwani. All Rights Reserved.
+        </footer>
+    </body>
+</html>
