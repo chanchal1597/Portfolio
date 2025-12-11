@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <style>
         
@@ -114,20 +115,57 @@
             }
 
             /* RESPONSIVE */
+            
             @media (max-width: 600px) {
+
+                header {
+                    padding: 20px 10px;
+                }
+
                 .profile-pic {
                     width: 120px;
                     height: 120px;
                 }
+
                 h1 {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                .navbar ul {
+                    flex-direction: column; 
+                    gap: 10px;
+                }
+
+                .navbar a {
+                    font-size: 16px;
+                    display: block;
+                    padding: 5px 0;
+                }
+
                 .section {
-                    margin: 20px;
+                    margin: 15px;
                     padding: 15px;
                 }
+
                 .projects-container {
-                    grid-template-columns: 1fr;
+                    grid-template-columns: 1fr; /* 1 project per row */
+                }
+
+                .project-card {
+                    padding: 10px;
+                }
+
+                .project-card img {
+                    height: 140px;
+                }
+
+                .social-icons a {
+                    font-size: 22px;
+                    margin: 5px;
                 }
             }
         </style>
